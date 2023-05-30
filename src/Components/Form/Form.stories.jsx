@@ -40,7 +40,7 @@ export const EmptySubmit = {
 
     await userEvent.click(submitBtn)
 
-    await expect(canvas.getByText(/please enter a valid email/i)).toBeInTheDocument()
+    await expect(canvas.getByText(/Email field should not be empty/i)).toBeInTheDocument()
     await expect(textInput).toHaveStyle("border-color: hsl(4 100% 67% / 50 )")
 
   }
