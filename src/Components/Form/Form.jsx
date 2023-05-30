@@ -20,7 +20,7 @@ export default function Form() {
 
     if(!inputEmail) {
       setError(true)
-      errorMsg("Email field should not be empty !!!")
+      setErrorMsg("Email field should not be empty !!!")
       return
     }
 
@@ -30,7 +30,7 @@ export default function Form() {
       setEmail(inputEmail)
     } else {
       setError(true)
-      errorMsg("Please enter a valid email !!!")
+      setErrorMsg("Please enter a valid email !!!")
     }
   }
 
