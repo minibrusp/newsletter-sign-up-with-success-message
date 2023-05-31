@@ -5,7 +5,22 @@ export default {
   title: "Components/Atoms/Button",
   tags: ["autodocs"],
   args: {
-    text: "This is button"
+    text: "Button",
+    backgroundColor: 'hsla(234, 29%, 20%, 1)',
+    textColor: 'hsla(0, 0%, 100%, 1)',
+    hoverBackgroundColor: 'hsla(4, 100%, 67%, 1)'
+  },
+  argTypes: {
+    backgroundColor: {
+      control: {
+        type: "color",
+      }
+    },
+    textColor: {
+      control: {
+        type: "color",
+      }
+    },
   },
   decorators: [
     (Story) => (
@@ -18,12 +33,12 @@ export default {
 
 export const Subscribe = {
   args: {
-    text: "Subscribe to monthly newsletter"
+    text: "Subscribe to monthly newsletter",
   }
 }
 
 export const Dismiss = {
   args: {
-    text: "Dismiss message"
+    text: "Dismiss message",
   }
 }

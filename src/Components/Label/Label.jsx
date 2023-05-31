@@ -15,3 +15,8 @@ Label.propTypes = {
   labelFor: PropTypes.string,
   text: PropTypes.string.isRequired
 }
+
+Label.defaultProps = {
+  labelFor: "",
+  text: "",
+}

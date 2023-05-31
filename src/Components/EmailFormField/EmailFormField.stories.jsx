@@ -12,6 +12,13 @@ export default {
     text: "Email address",
     error: false,
     errorMsg: "Please enter a valid email !!!"
+  },
+  argTypes: {
+    type: {
+      table: {
+        disable: true
+      }
+    }
   }
 }
 

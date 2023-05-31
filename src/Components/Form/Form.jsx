@@ -34,14 +34,6 @@ export default function Form() {
     }
   }
 
-  useEffect(() => {
-    console.log(inputEmail);
-  },[inputEmail])
-
-  useEffect(() => {
-    console.log(email);
-  },[email])
-
   return (
     <form 
       className="form flex flex-col justify-center items-start gap-6" 

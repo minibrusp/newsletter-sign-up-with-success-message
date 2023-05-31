@@ -9,6 +9,13 @@ export default {
     placeholder: "placeholder",
     id: null
   },
+  argTypes: {
+    type: {
+      table: {
+        disable: true
+      }
+    }
+  },
   decorators: [
     (Story) => (
       <div className="font-roboto">
@@ -18,32 +25,20 @@ export default {
   ]
 }
 
-export const Email = {
+export const inputEmail = {
   args: {
-    type: "email",
     placeholder: "email@company.com",
     id: "email",
-    value: null,
+    inputEmail: "",
     error: false
   },
-  parameters: {
-    value: {
-      controls: "text"
-    }
-  }
 }
 
-export const Error = {
+export const inputEmailError = {
   args: {
-    type: "email",
     placeholder: "email@company.com",
     id: "email",
-    value: null,
+    inputEmail: "",
     error: true
   },
-  parameters: {
-    value: {
-      controls: "text"
-    }
-  }
 }

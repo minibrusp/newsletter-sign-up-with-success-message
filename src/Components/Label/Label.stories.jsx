@@ -8,6 +8,13 @@ export default {
     labelFor: null,
     text: "Label"
   },
+  argTypes: {
+    labelFor: {
+      table: {
+        disable: true
+      }
+    }
+  },
   decorators: [
     (Story) => (
       <div className="font-roboto">

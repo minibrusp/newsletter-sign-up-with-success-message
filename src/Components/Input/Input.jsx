@@ -1,8 +1,6 @@
 import PropTypes from "prop-types"
-import { useState } from "react"
 
 export default function Input({
-  value, 
   type, 
   placeholder, 
   id, 
@@ -25,8 +23,15 @@ export default function Input({
 }
 
 Input.propTypes = {
-  type: PropTypes.string.isRequired,
+  type: PropTypes.string,
   placeholder: PropTypes.string.isRequired,
   id: PropTypes.string,
-  value: PropTypes.string
+  inputEmail: PropTypes.string
+}
+
+Input.defaultProps = {
+  type: "email",
+  placeholder: "",
+  id: "",
+  inputEmail: ""
 }
