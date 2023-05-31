@@ -19,7 +19,14 @@ export default {
         disable: true
       }
     }
-  }
+  },
+  decorators: [
+    (Story) => (
+      <div className="font-roboto">
+        <Story />
+      </div>
+    )
+  ]
 }
 
 export const EmailField = {}

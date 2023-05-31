@@ -13,7 +13,14 @@ export default {
   parameters: {
     error: true,
     errorMsg: "Hello"
-  }
+  },
+  decorators: [
+    (Story) => (
+      <div className="font-roboto">
+        <Story />
+      </div>
+    )
+  ]
 }
 
 export const EmailForm = {

@@ -6,7 +6,14 @@ export default {
   tags: ["autodocs"],
   args: {
     errorMessage: "This is a error"
-  }
+  },
+  decorators: [
+    (Story) => (
+      <div className="font-roboto">
+        <Story />
+      </div>
+    )
+  ]
 }
 
 export const EmailFormFieldError = {

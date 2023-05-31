@@ -21,6 +21,9 @@ export default {
       fontFamily: {
         roboto: [ 'Roboto', 'sans-serif' ]
       },
+      listStyleImage: {
+        checkmark: 'url("assets/images/icon-list.svg")',
+      },
     },
   },
   plugins: [],
