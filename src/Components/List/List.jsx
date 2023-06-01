@@ -12,7 +12,7 @@ export default function List({listItems}) {
     <ul className="flex flex-col gap-2">
       {
         listItems?.map((list, index) => (
-          <ListItem id={index} text={list} />
+          <ListItem key={index} text={list} />
         ))
       }
     </ul>
