@@ -1,5 +1,5 @@
 import HeadingText from "../HeadingText/HeadingText"
-import Paragraph from "../paragraph/paragraph"
+import Paragraph from "../Paragraph/Paragraph"
 import List from "../List/List"
 
 export default function SectionTextContent({ headingText, paragraphText, listItems }) {
