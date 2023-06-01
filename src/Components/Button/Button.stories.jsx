@@ -21,6 +21,11 @@ export default {
         type: "color",
       }
     },
+    hoverBackgroundColor: {
+      control: {
+        type: "color"
+      }
+    }
   },
   decorators: [
     (Story) => (

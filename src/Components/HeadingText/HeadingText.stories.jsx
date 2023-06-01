@@ -5,7 +5,16 @@ export default {
   title: "Components/Atoms/HeadingText",
   tags: ["autodocs"],
   args: {
-    text: "Hello"
+    text: "Hello",
+    level: 1,
+    textColor: "hsla(234, 29%, 20%, 1)",
+  },
+  argTypes: {
+    level: {
+      control: {
+        type: "select"
+      }
+    }
   },
   decorators: [
     (Story) => (

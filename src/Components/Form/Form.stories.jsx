@@ -8,7 +8,7 @@ import { useAddonState } from '@storybook/manager-api';
 
 export default {
   component: Form,
-  title: "Components/Organisms/Form",
+  title: "Components/Molecules/Form",
   tags: ["autodocs"],
   parameters: {
     error: true,

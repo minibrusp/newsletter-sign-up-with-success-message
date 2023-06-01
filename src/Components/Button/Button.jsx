@@ -5,15 +5,15 @@ export default function Button({ backgroundColor, textColor, hoverBackgroundColo
   const [isHover, setIsHover] = useState(false)
 
   const computedBackgroundColor = useMemo(() => {
-    return backgroundColor ? {backgroundColor: backgroundColor} : {}
+    return backgroundColor ? {backgroundColor: backgroundColor} : null
   }, [backgroundColor])
 
   const computedTextColor = useMemo(() => {
-    return textColor ? { color: textColor } : {}
+    return textColor ? { color: textColor } : null
   }, [textColor])
 
   const computedHoverBgColor = useMemo(() => {
-    return hoverBackgroundColor ? { backgroundColor: hoverBackgroundColor } : {}
+    return hoverBackgroundColor ? { backgroundColor: hoverBackgroundColor } : null
   }, [hoverBackgroundColor])
 
   const handleMouseEnter = () => {
