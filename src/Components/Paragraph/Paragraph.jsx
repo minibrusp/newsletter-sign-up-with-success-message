@@ -15,6 +15,9 @@ export default function Paragraph({text}) {
 
     let result = textHasEmailReturnEmail
 
+    // if no email just return text
+    if(!result.itHasEmail) return text
+
     const splittedText = result.email.reduce((accumulator, currentEmail, currentIndex) => {
 
       let maxLength = accumulator?.length - 1
