@@ -3,9 +3,16 @@ import SectionTextContent from "../SectionTextContent/SectionTextContent"
 import SectionCardImage from "../SectionCardImage/SectionCardImage"
 import Form from "../Form/Form"
 
-export default function SectionHomeCard({altText, imgUrlDesktop, imgUrlMobile}) {
+export default function SectionHomeCard({
+  altText, 
+  imgUrlDesktop, 
+  imgUrlMobile,
+  headingText,
+  listItems,
+  paragraphText
+}) {
   return (
-    <div className="bg-neutral-white md:flex md:flex-row-reverse md:justify-center md:items-center md:p-6 md:max-w-[928px] md:rounded-[35px]">
+    <div className="bg-neutral-white md:flex md:flex-row-reverse md:justify-center md:items-center md:gap-12 md:p-6 md:max-w-[928px] md:rounded-[35px]">
       <SectionCardImage 
         altText={altText}
         imgUrlDesktop={imgUrlDesktop}
@@ -14,13 +21,9 @@ export default function SectionHomeCard({altText, imgUrlDesktop, imgUrlMobile}) 
       <div className="px-5 py-4">
         <SectionCardForm>
           <SectionTextContent
-            headingText="Stay updated!"
-            listItems={[
-              'Product discovery and building what matters',
-              'Measuring to ensure updates are a success',
-              'And much more!'
-            ]}
-            paragraphText="Join 60,000+ product managers receiving monthly updates on:"
+            headingText={headingText}
+            listItems={listItems}
+            paragraphText={paragraphText}
           />
           <Form />
         </SectionCardForm>

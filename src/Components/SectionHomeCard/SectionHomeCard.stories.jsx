@@ -9,7 +9,15 @@ export default {
   args: {
     imgUrlMobile: HeroImageMobile,
     imgUrlDesktop: HeroImageDesktop,
-    altText: "Hero Image"
+    altText: "Hero Image",
+    headingText: "Stay updated!",
+    listItems: [
+      'Product discovery and building what matters',
+      'Measuring to ensure updates are a success',
+      'And much more!'
+    ],
+    paragraphText: "Join 60,000+ product managers receiving monthly updates on:"
+
   },
   argTypes: {
     imgUrlDesktop: {
@@ -47,6 +55,13 @@ export default {
 }
 
 export const Mobile = {
+  argTypes: {
+    imgUrlDesktop: {
+      table: {
+        disable: true
+      }
+    }
+  },
   parameters: {
     viewport: {
       defaultViewport: "FEMMOBILE"
@@ -54,7 +69,7 @@ export const Mobile = {
   },
   decorators: [
     (Story) => (
-      <div className="font-roboto max-w-[375px] p-4">
+      <div className="font-roboto max-w-[375px]">
         <Story />
       </div>
     )
@@ -62,6 +77,13 @@ export const Mobile = {
 }
 
 export const Desktop = {
+  argTypes: {
+    imgUrlMobile: {
+      table: {
+        disable: true
+      }
+    }
+  },
   parameters: {
     viewport: {
       defaultViewport: "FEMDESKTOP"

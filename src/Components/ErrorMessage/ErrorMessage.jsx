@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 export default function ErrorMessage({ errorMessage="valid email required" }) {
   return (
     <div className="form__email__error">
-      <span className="text-primary-tomato text-sm font-bold">{errorMessage}</span>
+      <span className="text-primary-tomato text-xs font-bold block">{errorMessage}</span>
     </div>
   )
 }
