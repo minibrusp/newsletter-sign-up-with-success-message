@@ -18,7 +18,7 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div className="font-roboto">
+      <div className="font-roboto max-w-[375px] md:max-w-[376px]">
         <Story />
       </div>
     )
@@ -34,11 +34,19 @@ export const inputEmail = {
   },
 }
 
-export const inputEmailError = {
+export const inputEmailEmptyError = {
   args: {
     placeholder: "email@company.com",
     id: "email",
     inputEmail: "",
+    error: true
+  },
+}
+export const inputEmailInvalidError = {
+  args: {
+    placeholder: "email@company.com",
+    id: "email",
+    inputEmail: "ash#loremcompany.com",
     error: true
   },
 }

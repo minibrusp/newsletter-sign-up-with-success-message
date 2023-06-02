@@ -6,15 +6,15 @@ import ErrorMessage from "../ErrorMessage/ErrorMessage"
 
 export default function EmailFormField({ id, text, type, placeholder, error, errorMsg, ...props }) {
   return (
-    <div className="form__email flex flex-col justify-center items-start gap-2">
-      
-      <div className="form__email__text leading-tight">
+    <div className="form__email flex flex-col justify-center items-start gap-2 w-full">
+      {/* max-w-[375px] md:max-w-[376px] */}
+      <div className="form__email__text leading-tight flex flex-row justify-between items-center w-full">
         <Label
           labelFor={id}
           text={text}
         />
         { error ? (
-          <ErrorMessage errorMessage={errorMsg || "Please enter a valid email !!!"} />
+          <ErrorMessage errorMessage={errorMsg || "valid email required"} />
           )
           : null
         }

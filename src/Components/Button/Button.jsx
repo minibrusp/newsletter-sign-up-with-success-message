@@ -35,7 +35,9 @@ export default function Button({ backgroundColor, textColor, hoverBackgroundColo
           ${backgroundColor ? '' : 'bg-neutral-dark-slate-grey'}
           ${textColor ? '' : 'text-neutral-white' }
           ${hoverBackgroundColor ? '' : 'hover:bg-primary-tomato' } 
-          min-w-[327px] p-4 rounded-lg font-bold hover:shadow-2xl
+          p-4 rounded-lg font-bold hover:shadow-2xl
+          w-full
+          max-w-[376px]
         `
       }
       type="submit"

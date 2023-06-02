@@ -10,7 +10,7 @@ export default function Paragraph({text= "hello"}) {
   }, [text])
 
   return (
-    <p className="text-neutral-charcoal-grey">{checkedText}</p>
+    <p className="text-neutral-charcoal-grey max-w-[375px]">{checkedText}</p>
   )
 }
 

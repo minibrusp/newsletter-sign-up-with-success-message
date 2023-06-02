@@ -10,6 +10,7 @@ const DynamicHeadingTag = ({ level, children, computedTextColor, computedLevelSt
       text-[2.5rem] 
       font-bold
       leading-none
+      md:text-[3.5rem]
     `}
     style={{...computedTextColor, ...computedLevelStyle}}
     >

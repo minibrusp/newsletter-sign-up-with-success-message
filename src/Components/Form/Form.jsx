@@ -20,7 +20,7 @@ export default function Form() {
 
     if(!inputEmail) {
       setError(true)
-      setErrorMsg("Email field should not be empty !!!")
+      setErrorMsg("empty field")
       return
     }
 
@@ -30,13 +30,13 @@ export default function Form() {
       setEmail(inputEmail)
     } else {
       setError(true)
-      setErrorMsg("Please enter a valid email !!!")
+      setErrorMsg("valid email required")
     }
   }
 
   return (
     <form 
-      className="form flex flex-col justify-center items-start gap-6" 
+      className="form flex flex-col justify-center items-start gap-6 max-w-[375px] md:max-w-[376px]" 
       onSubmit={submitHandler}
     >
       <EmailFormField 

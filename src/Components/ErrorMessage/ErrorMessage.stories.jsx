@@ -18,6 +18,18 @@ export default {
 
 export const EmailFormFieldError = {
   args: {
-    errorMessage: "Please enter a valid email !!!"
+    errorMessage: "valid email required"
+  }
+}
+
+export const EmailFormFieldErrorValidEmail = {
+  args: {
+    errorMessage: "valid email required"
+  }
+}
+
+export const EmailFormFieldErrorEmptyField = {
+  args: {
+    errorMessage: "empty field"
   }
 }

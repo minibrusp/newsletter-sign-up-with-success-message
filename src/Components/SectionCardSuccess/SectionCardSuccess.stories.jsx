@@ -26,16 +26,20 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div className="font-roboto pt-4">
+      <div className="font-roboto">
         <Story />
       </div>
     )
-  ]
+  ],
   
 }
 
-// export const SectionSuccessCard = {}
 export const Mobile = {
+  parameters: {
+    viewport: {
+      defaultViewport: "FEMMOBILE"
+    }
+  },
   decorators: [
     (Story) => (
       <div className="font-roboto max-w-[375px]">
@@ -43,4 +47,25 @@ export const Mobile = {
       </div>
     )
   ]
+}
+
+export const Desktop = {
+  decorators: [
+    (Story) => (
+      <div className="font-roboto max-w-[504px]">
+        <Story />
+      </div>
+    )
+  ],
+  parameters: {
+    viewport: {
+      defaultViewport: "FEMDESKTOP"
+    },
+    backgrounds: {
+      default: 'mainBackground',
+      values: [
+        {name: "mainBackground", value: "hsla(235, 18%, 26%, 1)"}
+      ]
+    }
+  }
 }

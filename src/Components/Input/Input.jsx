@@ -12,7 +12,15 @@ export default function Input({
 
   return (
     <input
-      className={`min-w-[327px] p-4 rounded-lg border  ${ error ? 'border-primary-tomato' : 'border-neutral-grey/50' }`} 
+    // min-w-[327px] 
+      className={`
+        p-4 
+        rounded-lg border  
+        ${ error ? 'border-primary-tomato bg-primary-tomato/10 text-primary-tomato placeholder:text-primary-tomato/30 focus-visible:outline-none ' : 'border-neutral-grey/50' }
+        w-full
+        `} 
+        // md:min-w-[376px]
+        // max-w-[376px] 
       type={type} 
       placeholder={placeholder}
       id={id}

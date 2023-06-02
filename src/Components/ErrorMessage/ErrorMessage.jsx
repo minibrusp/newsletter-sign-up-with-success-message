@@ -1,6 +1,6 @@
 import PropTypes from "prop-types"
 
-export default function ErrorMessage({ errorMessage="Please enter a valid email !!!" }) {
+export default function ErrorMessage({ errorMessage="valid email required" }) {
   return (
     <div className="form__email__error">
       <span className="text-primary-tomato text-sm font-bold">{errorMessage}</span>
@@ -13,5 +13,5 @@ ErrorMessage.propTypes = {
 }
 
 ErrorMessage.defaultProps = {
-  errorMessage: "Please enter a valid email !!!"
+  errorMessage: "valid email required"
 }

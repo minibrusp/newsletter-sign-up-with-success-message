@@ -11,7 +11,7 @@ export default {
     labelFor: "email",
     text: "Email address",
     error: false,
-    errorMsg: "Please enter a valid email !!!"
+    errorMsg: "valid email required"
   },
   argTypes: {
     type: {
@@ -22,7 +22,7 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div className="font-roboto">
+      <div className="font-roboto max-w-[375px] md:max-w-[376px]">
         <Story />
       </div>
     )
@@ -34,14 +34,14 @@ export const EmailField = {}
 export const EmailFieldEmptySubmit = {
   args: {
     error: true,
-    errorMsg: "Email field should not be empty !!!"
+    errorMsg: "empty field"
   }
 }
 
 export const EmailFieldInvalidSubmit = {
   args: {
     error: true,
-    errorMsg: "Please enter a valid email !!!",
+    errorMsg: "valid email required",
     inputEmail: "email@company"
   }
 }

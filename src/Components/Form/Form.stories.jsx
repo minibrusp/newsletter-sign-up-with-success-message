@@ -16,7 +16,7 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div className="font-roboto">
+      <div className="font-roboto max-w-[375px] md:max-w-[376px]">
         <Story />
       </div>
     )
@@ -47,7 +47,7 @@ export const EmptySubmit = {
 
     await userEvent.click(submitBtn)
 
-    await expect(canvas.getByText(/Email field should not be empty/i)).toBeInTheDocument()
+    await expect(canvas.getByText(/empty field/i)).toBeInTheDocument()
     await expect(textInput).toHaveStyle("border-color: hsl(4 100% 67% / 50 )")
 
   }
@@ -65,7 +65,7 @@ export const InvalidSubmit = {
 
     await userEvent.click(submitBtn)
 
-    await expect(canvas.getByText(/please enter a valid email/i)).toBeInTheDocument()
+    await expect(canvas.getByText(/valid email required/i)).toBeInTheDocument()
     await expect(textInput).toHaveStyle("border-color: hsl(4 100% 67% / 50 )")
 
   }
