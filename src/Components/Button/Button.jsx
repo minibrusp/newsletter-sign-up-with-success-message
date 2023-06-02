@@ -37,7 +37,7 @@ export default function Button({ backgroundColor, textColor, hoverBackgroundColo
           ${hoverBackgroundColor ? '' : 'hover:bg-primary-tomato' } 
           p-4 rounded-lg font-bold hover:shadow-2xl
           w-full
-          max-w-[376px]
+          max-w-[550px]
         `
       }
       type="submit"

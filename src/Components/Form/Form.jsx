@@ -36,7 +36,7 @@ export default function Form() {
 
   return (
     <form 
-      className="form flex flex-col justify-center items-start gap-6 max-w-[375px] md:max-w-[376px]" 
+      className="form flex flex-col justify-center items-start gap-6 max-w-[550px] md:max-w-[376px]" 
       onSubmit={submitHandler}
     >
       <EmailFormField 

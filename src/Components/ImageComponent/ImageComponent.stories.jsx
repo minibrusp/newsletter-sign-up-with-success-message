@@ -24,7 +24,14 @@ export default {
         defaultValue: HeroImageMobile
       }
     }
-  }
+  },
+  decorators: [
+    (Story) => (
+      <div className="max-w-[375px]">
+        <Story />
+      </div>
+    )
+  ]
 }
 
 export const HeroImage = {
@@ -33,6 +40,7 @@ export const HeroImage = {
     imgUrlDesktop: HeroImageDesktop,
     altText: "Hero Image"
   },
+
 }
 
 export const Mobile = {
@@ -51,6 +59,13 @@ export const Mobile = {
       defaultViewport: "FEMMOBILE"
     }
   },
+  decorators: [
+    (Story) => (
+      <div className="max-w-[375px]">
+        <Story />
+      </div>
+    )
+  ]
 }
 
 export const Desktop = {

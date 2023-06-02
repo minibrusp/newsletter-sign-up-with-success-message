@@ -6,9 +6,9 @@ import PropTypes from "prop-types"
 export default function ImageComponent({imgUrlMobile, imgUrlDesktop, altText}) {
   return (
     <picture className="w-full">
-      <source media="(max-width:649px)" srcSet={imgUrlMobile} alt={altText} />
-      <source media="(min-width:650px)" srcSet={imgUrlDesktop} alt={altText} />
-      <img className="card__img__img" src={imgUrlMobile} alt={altText} />
+      <source media="(max-width:767px)" srcSet={imgUrlMobile} alt={altText} />
+      <source media="(min-width:768px)" srcSet={imgUrlDesktop} alt={altText} />
+      <img className="card__img__img w-full max-w-[550px] md:max-w-none" src={imgUrlMobile} alt={altText} />
     </picture>
   )
 }

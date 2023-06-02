@@ -10,7 +10,7 @@ export default {
     imgAltText: "check icon",
     size: "medium",
     headingText: "Thanks for subscribing!",
-    paragraphText: "A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.",
+    email: "ash@loremcompany.com",
     buttonBgColor: 'hsla(234, 29%, 20%, 1)',
     buttonTxtColor: 'hsla(0, 0%, 100%, 1)',
     buttonHoverColor: 'hsla(4, 100%, 67%, 1)',
@@ -24,21 +24,34 @@ export default {
       }
     }
   },
+  parameters: {
+    backgrounds: {
+      default: 'mainBackground',
+      values: [
+        {name: "mainBackground", value: "hsla(235, 18%, 26%, 1)"}
+      ]
+    },
+    
+  }
+  
+}
+
+export const Primary = {
   decorators: [
     (Story) => (
-      <div className="font-roboto">
+      <div className="font-roboto max-w-[375px]">
         <Story />
       </div>
     )
   ],
-  
 }
 
 export const Mobile = {
   parameters: {
     viewport: {
       defaultViewport: "FEMMOBILE"
-    }
+    },
+    layout: "fullscreen"
   },
   decorators: [
     (Story) => (
