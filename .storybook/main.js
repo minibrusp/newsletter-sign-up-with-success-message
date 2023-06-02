@@ -6,7 +6,8 @@ const config = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/addon-viewport",
-    "@storybook/manager-api"
+    "@storybook/manager-api",
+    "storybook-addon-designs"
   ],
   framework: {
     name: "@storybook/react-vite",

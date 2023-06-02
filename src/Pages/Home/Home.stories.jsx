@@ -27,6 +27,11 @@ export const Mobile = {
     viewport: {
       defaultViewport: "FEMMOBILE"
     },
+    design: {
+      type: "figma",
+      url: "https://www.figma.com/file/pqBRoDpWnjWNAZIlhU2ms7/Untitled?type=design&node-id=90-10&t=KGEueDPhXgILtpAD-4",
+      allowFullscreen: true,
+    },
   },
   decorators: [
     (Story) => (
@@ -36,6 +41,7 @@ export const Mobile = {
     )
   ],
 }
+  
 export const Desktop = {
   parameters: {
     viewport: {
@@ -43,3 +49,11 @@ export const Desktop = {
     },
   },
 }
+
+Desktop.parameters = {
+  design: {
+    type: "figma",
+    url: "https://www.figma.com/file/pqBRoDpWnjWNAZIlhU2ms7/Untitled?type=design&node-id=90-8&t=KGEueDPhXgILtpAD-4",
+    allowFullscreen: true,
+  },
+};
