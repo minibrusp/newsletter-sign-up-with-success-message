@@ -29,7 +29,7 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div className="font-roboto">
+      <div className="font-roboto max-w-[350px]">
         <Story />
       </div>
     )

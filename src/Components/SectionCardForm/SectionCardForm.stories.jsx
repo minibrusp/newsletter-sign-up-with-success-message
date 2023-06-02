@@ -1,6 +1,7 @@
 import Form from "../Form/Form"
 import SectionTextContent from "../SectionTextContent/SectionTextContent"
 import SectionCardForm from "./SectionCardForm"
+import { FormContextProvider } from "../../Context/FormContext"
 
 
 export default {
@@ -31,9 +32,11 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div className="font-roboto">
-        <Story />
-      </div>
+      <FormContextProvider>
+        <div className="font-roboto">
+          <Story />
+        </div>
+      </FormContextProvider>
     )
   ]
 }

@@ -1,5 +1,6 @@
 import SectionCardSuccess from "./SectionCardSuccess"
 import successIcon from "../../assets/images/icon-success.svg"
+import { FormContextProvider } from "../../Context/FormContext"
 
 export default {
   component: SectionCardSuccess,
@@ -32,18 +33,15 @@ export default {
       ]
     },
     
-  }
-  
-}
-
-export const Primary = {
+  },
   decorators: [
     (Story) => (
-      <div className="font-roboto max-w-[375px]">
+      <FormContextProvider>
         <Story />
-      </div>
+      </FormContextProvider>
     )
   ],
+  
 }
 
 export const Mobile = {

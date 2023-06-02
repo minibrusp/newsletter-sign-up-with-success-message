@@ -1,9 +1,9 @@
 import Form from "./Form"
 
-import { userEvent, within } from '@storybook/testing-library';
+import { userEvent, within } from '@storybook/testing-library'
 import { expect } from "@storybook/jest"
 
-import { useAddonState } from '@storybook/manager-api';
+import { FormContextProvider } from "../../Context/FormContext"
 
 
 export default {
@@ -16,9 +16,11 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div className="font-roboto max-w-[375px] md:max-w-[376px]">
-        <Story />
-      </div>
+      <FormContextProvider>
+        <div className="font-roboto max-w-[375px] md:max-w-[376px]">
+          <Story />
+        </div>
+      </FormContextProvider>
     )
   ]
 }

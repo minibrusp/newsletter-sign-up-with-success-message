@@ -1,10 +1,11 @@
-import { useState } from "react"
 import SectionHomeCard from "../../Components/SectionHomeCard/SectionHomeCard"
 import SectionCardSuccess from "../../Components/SectionCardSuccess/SectionCardSuccess"
 
+import useFormContext from "../../Hooks/useFormContext"
+
 export default function Home() {
 
-  const [isFormSuccess, setIsFormSuccess ] = useState(false)
+  const { isFormSuccess } = useFormContext()
 
   return (
     <section className="Home bg-neutral-charcoal-grey font-roboto min-h-screen md:py-8 md:min-h-screen md:flex md:justify-center md:items-center">

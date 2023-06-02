@@ -4,8 +4,11 @@ import Button from "../Button/Button"
 import successIcon from "../../assets/images/icon-success.svg"
 import { useMemo } from "react"
 
-export default function SectionCardSuccess({ 
-  email = "ash@loremcompany.com", 
+import useFormContext from "../../Hooks/useFormContext"
+import useForm from "../../Hooks/useForm"
+
+export default function SectionCardSuccess({
+  email: storyEmail, 
   imgSrc = successIcon, 
   imgAltText = "check icon", 
   size = "medium", 
@@ -14,12 +17,18 @@ export default function SectionCardSuccess({
   buttonTxtColor, 
   buttonHoverColor, 
   buttonText = "Dismiss message", 
-  ...props 
 }) {
+
+  const { email } = useFormContext()
+  const { dissmiss } = useForm()
   
   const setEmailToParagraphText = useMemo(() => {
-    return `A confirmation email has been sent to ${email}. Please open it and click the button inside to confirm your subscription.`
-  }, [email])
+    return `A confirmation email has been sent to ${email ? email : storyEmail }. Please open it and click the button inside to confirm your subscription.`
+  }, [email, storyEmail])
+
+  const btnClickHandler = () => {
+    dissmiss()
+  }
   
   return (
     <div className="card__success bg-white p-6 flex flex-col justify-between items-start min-h-screen max-w-[504px] mx-auto md:justify-start md:gap-[2.3rem] md:min-h-min md:py-14 md:px-16 md:rounded-[35px]">
@@ -34,12 +43,12 @@ export default function SectionCardSuccess({
           paragraphText={setEmailToParagraphText}
         />
       </div>
-      <Button 
+      <Button
         backgroundColor={buttonBgColor}
         textColor={buttonTxtColor}
         hoverBackgroundColor={buttonHoverColor}
         text={buttonText}
-        {...props}
+        btnClickHandler={btnClickHandler}
       />
 
     </div>

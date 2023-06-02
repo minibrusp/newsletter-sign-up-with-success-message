@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import { useMemo, useState } from "react"
 
-export default function Button({ backgroundColor, textColor, hoverBackgroundColor, text, ...props }) {
+export default function Button({ type ="submit", backgroundColor, textColor, hoverBackgroundColor, text, btnClickHandler }) {
   const [isHover, setIsHover] = useState(false)
 
   const computedBackgroundColor = useMemo(() => {
@@ -40,10 +40,13 @@ export default function Button({ backgroundColor, textColor, hoverBackgroundColo
           max-w-[550px]
         `
       }
-      type="submit"
+      
+      type={type ? "submit" : "button"}
+      
       style={{...currentBackgroundColor, ...computedTextColor}}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={btnClickHandler}
     >
       {text}
     </button>

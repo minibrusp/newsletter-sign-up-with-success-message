@@ -1,37 +1,14 @@
-import { useEffect, useState } from "react"
 import Button from "../Button/Button"
 import EmailFormField from "../EmailFormField/EmailFormField"
 
-import emailValidator from "email-validator"
+import useForm from "../../Hooks/useForm"
 
 export default function Form() {
-  
-  const [email, setEmail ] = useState("")
-  const [inputEmail, setInputEmail] = useState("")
-  const [error, setError] = useState(false)
-  const [errorMsg, setErrorMsg] = useState("")
-
-  const validateEmail = email => {
-    return emailValidator.validate(email)
-  }
+  const { inputEmail, setInputEmail, error, errorMsg, subscribe } = useForm()
 
   const submitHandler = (e) => {
     e.preventDefault()
-
-    if(!inputEmail) {
-      setError(true)
-      setErrorMsg("empty field")
-      return
-    }
-
-    if(validateEmail(inputEmail)) {
-      setError(false)
-      setErrorMsg("")
-      setEmail(inputEmail)
-    } else {
-      setError(true)
-      setErrorMsg("valid email required")
-    }
+    subscribe()
   }
 
   return (

@@ -1,4 +1,5 @@
 import Home from "./Home"
+import { FormContextProvider } from "../../Context/FormContext"
 
 export default {
   component: Home,
@@ -8,6 +9,15 @@ export default {
   parameters: {
     layout: "fullscreen",
   },
+  decorators: [
+    (Story) => (
+      <FormContextProvider>
+        <div className="">
+          <Story />
+        </div>
+      </FormContextProvider>
+    )
+  ],
 }
 
 export const HomePage = {}

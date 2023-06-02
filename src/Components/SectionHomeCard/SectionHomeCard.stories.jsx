@@ -2,6 +2,8 @@ import SectionHomeCard from "./SectionHomeCard"
 import HeroImageDesktop from "../../assets/images/illustration-sign-up-desktop.svg"
 import HeroImageMobile from "../../assets/images/illustration-sign-up-mobile.svg"
 
+import { FormContextProvider } from "../../Context/FormContext"
+
 export default {
   component: SectionHomeCard,
   title: "Components/Organism/SectionHomeCard",
@@ -46,9 +48,11 @@ export default {
   },
   decorators: [
     (Story) => (
-      <div className="font-roboto">
-        <Story />
-      </div>
+      <FormContextProvider>
+        <div className="font-roboto">
+          <Story />
+        </div>
+      </FormContextProvider>
     )
   ],
 
