@@ -42,6 +42,12 @@ export const Subscribe = {
   }
 }
 
+export const loading = {
+  args: {
+    isLoading: true
+  }
+}
+
 export const Dismiss = {
   args: {
     text: "Dismiss message",

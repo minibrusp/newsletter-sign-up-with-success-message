@@ -54,8 +54,8 @@ export default function useForm() {
         "email": inputEmail
       }
 
-      // const response = await fetch(`https://newsletter-sign-up-with-success-message-backend.vercel.app/subscribe`, {
-      const response = await fetch(`http://localhost:4001/subscribe`, {
+      // const response = await fetch(`http://localhost:4001/subscribe`, {
+      const response = await fetch(`https://newsletter-sign-up-with-success-message-backend.vercel.app/subscribe`, {
         method: "POST",
         body: JSON.stringify(data),
         headers: {
@@ -90,7 +90,7 @@ export default function useForm() {
 
   }
 
-  
+
 
   const dissmiss = () => {
     setTimeout(() => {

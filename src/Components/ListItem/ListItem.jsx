@@ -4,7 +4,7 @@ import listIconCheck from "../../assets/images/icon-list.svg"
 
 export default function ListItem({ text, listIcon }) {
   return (
-    <li className="list-none inline-flex gap-4">
+    <li className="text-neutral-charcoal-grey list-none inline-flex gap-4">
       <Icon imgAltText="check icon" imgSrc={listIcon || listIconCheck} />
       <span>{text}</span>
     </li>
