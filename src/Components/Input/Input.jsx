@@ -16,7 +16,9 @@ export default function Input({
       className={`
         p-4 
         rounded-lg border  
-        ${ error ? 'border-primary-tomato bg-primary-tomato/10 text-primary-tomato placeholder:text-primary-tomato/30 focus-visible:outline-none ' : 'border-neutral-grey/50' }
+        ${ error ? 'text-primary-tomato' : 'text-neutral-dark-slate-grey'}
+        ${ error ? 
+          ' border-primary-tomato bg-primary-tomato/10 placeholder:text-primary-tomato/30 focus-visible:outline-none ' : 'border-neutral-grey/50' }
         w-full
         `} 
         // md:min-w-[376px]

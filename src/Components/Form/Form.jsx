@@ -4,11 +4,11 @@ import EmailFormField from "../EmailFormField/EmailFormField"
 import useForm from "../../Hooks/useForm"
 
 export default function Form() {
-  const { inputEmail, setInputEmail, error, errorMsg, subscribe } = useForm()
+  const { inputEmail, setInputEmail, error, errorMsg, subscribe, isLoading } = useForm()
 
-  const submitHandler = (e) => {
+  const submitHandler = async (e) => {
     e.preventDefault()
-    subscribe()
+    await subscribe()
   }
 
   return (
@@ -19,6 +19,7 @@ export default function Form() {
       <EmailFormField 
         type="email"
         id="email"
+        name="email"
         placeholder="email@company.com"
         labelFor="email"
         text="Email address"
@@ -29,6 +30,7 @@ export default function Form() {
       />
       <Button 
         text="Subscribe to monthly newsletter"
+        isLoading={isLoading}
       />
     </form>
   )

@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import { useMemo, useState } from "react"
 
-export default function Button({ type ="submit", backgroundColor, textColor, hoverBackgroundColor, text, btnClickHandler }) {
+export default function Button({ type ="submit", backgroundColor, textColor, hoverBackgroundColor, text, btnClickHandler, isLoading }) {
   const [isHover, setIsHover] = useState(false)
 
   const computedBackgroundColor = useMemo(() => {
@@ -47,8 +47,10 @@ export default function Button({ type ="submit", backgroundColor, textColor, hov
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onClick={btnClickHandler}
+      disabled={isLoading}
     >
-      {text}
+      {!isLoading && text}
+      {isLoading && "Loading..."}
     </button>
   )
 }
@@ -56,11 +58,13 @@ export default function Button({ type ="submit", backgroundColor, textColor, hov
 Button.propTypes = {
   text: PropTypes.string.isRequired,
   backgroundColor: PropTypes.string,
-  textColor: PropTypes.string
+  textColor: PropTypes.string,
+  isLoading: PropTypes.bool
 }
 
 Button.defaultProps = {
   text: "Button",
   backgroundColor: null,
-  textColor: null
+  textColor: null,
+  isLoading: false
 }
