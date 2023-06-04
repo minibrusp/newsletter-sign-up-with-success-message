@@ -34,14 +34,13 @@ Home | Success
 
 ### Links
 
--   Solution URL: [here]()
+-   Solution URL: [here](https://www.frontendmentor.io/solutions/newsletter-signup-form-w-success-msg-react-vite-tailwindcss-storybook-N0gEx2h0hK)
 -   Live Site URL: [here](https://newsletter-sign-up-with-success-message-frontend.vercel.app/)
 -   Live Storybook URL: [here](https://newsletter-sign-up-with-success-message-storybook.vercel.app/)
 -   Backend Github Repository URL: [here](https://github.com/minibrusp/newsletter-sign-up-with-success-message-backend)
 
 ### Built with
 -   REACT
--   JSON WEB TOKENS (JWT)
 -   REACT HOOKS
 -   TailwindCSS
 -   VITE
