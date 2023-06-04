@@ -14,6 +14,6 @@ addons.setConfig({
     collapsedRoots: ['other'],
   },
   initialActive: 'sidebar',
-  selectedPanel: ,
+  selectedPanel: 'sidebar',
   
 });
