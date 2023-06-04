@@ -8,7 +8,6 @@ addons.setConfig({
   enableShortcuts: true,
   showToolbar: true,
   showPanel: true,
-  panelPosition: right,
   sidebar: {
     showRoots: true,
     collapsedRoots: ['other'],

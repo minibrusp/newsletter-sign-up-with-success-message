@@ -33,3 +33,9 @@ export const EmailFormFieldErrorEmptyField = {
     errorMessage: "empty field"
   }
 }
+
+export const EmailAlreadyASubscriber = {
+  args: {
+    errorMessage: "email@company.com already subscribed"
+  }
+}

@@ -1,7 +1,7 @@
 import Home from "./Home"
 import { FormContextProvider } from "../../Context/FormContext"
 
-import { userEvent, within } from '@storybook/testing-library'
+import { userEvent, waitFor, within } from '@storybook/testing-library'
 import { expect } from "@storybook/jest"
 
 export default {
@@ -109,6 +109,27 @@ export const TestInvalidSubmit = {
     await expect(canvas.getByText(/valid email required/i)).toBeInTheDocument()
     await expect(textInput).toHaveStyle("border-color: hsl(4 100% 67% / 50 )")
 
+  }
+}
+
+export const TestEmailAlreadyASubscriberSubmit = {
+  play: async ({canvasElement}) => {
+    const canvas = within(canvasElement)
+
+    const textInput = canvas.getByPlaceholderText(/email@company.com/i)
+    const submitBtn = canvas.getByRole('button', { name: /subscribe/i })
+
+    await userEvent.type(textInput, "tecekof802@ratedane.com")
+    await userEvent.click(submitBtn)
+
+    // await expect(canvas.findByText(/tecekof802@ratedane.com already subscribed/)).toBeInTheDocument()
+
+    await waitFor(() => {
+      expect(canvas.getByText(/tecekof802@ratedane.com already subscribed/)).toBeInTheDocument()
+      expect(canvas.getByText(/tecekof802@ratedane.com/i)).toBeInTheDocument()
+      expect(canvas.getByText(/tecekof802@ratedane.com/i)).toHaveStyle("color: hsl(4 100% 67% / 50 )")
+      
+    })
   }
 }
 
